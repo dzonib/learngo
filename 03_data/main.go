@@ -20,10 +20,28 @@ var city, street string
 
 func main() {
 
+	redeclaration()
 	// declare multiple variables with different type (short)
 	test, hungry := "lalal", true
 
 	name, lastname := "Nikola", "Tesla"
 
 	fmt.Println(test, hungry, name, lastname)
+
+}
+
+func redeclaration() {
+	// default value is false if it's not defined
+	var safe bool
+
+	// you must have at lest one new variable declaration in short mode
+	// or redeclaration won't work
+	// change safe to true
+	safe, speed := true, 100
+
+	// or declare normaly
+	safe = false
+	// back to false
+
+	fmt.Println(safe, speed)
 }
